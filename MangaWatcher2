@@ -1,0 +1,57 @@
+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+WindUI:SetNotificationLower(true)
+WindUI:SetFont("rbxasset://fonts/families/FredokaOne.json")
+
+local Window = WindUI:CreateWindow({
+    Title = "Lemon Hub",
+    Icon = "rbxassetid://107076931241789",
+    Author = "Xem Manga",
+    Folder = "Flandre Hub",
+    Size = UDim2.fromOffset(1, 1),
+    Transparent = false,
+    Theme = "Dark",
+    SideBarWidth = 150,
+    Background = "",
+    BackgroundImageTransparency = 0.42,
+    AutoScale = true,
+    HideSearchBar = true,
+    ScrollBarEnabled = true,
+})
+
+local Tab1 = Window:Tab({Title = "trang 1", Icon = "house"})
+
+local ElementsSection = Tab1:Section({Title = "chuyện tình lãng mạng nơi xưởng vẽ", Icon = ""})
+
+Tab1:Button({
+    Title = "Chapter 1(Hết)",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        local MangaMaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/phanchitinhps2020-beep/Script/refs/heads/main/MangaMaker"))()
+local win = MangaMaker:CreateWindow("Chapter 1")
+
+-- Thêm ảnh nhanh
+for i=2,24 do
+    local url = "https://raw.githubusercontent.com/phanchitinhps2020-beep/chuyen-tinh-lang-mang-noi-xuong-ve/refs/heads/main/"..i..".jpg"
+    win:AddImage(url)
+end
+    end
+})
+
+local ElementsSection2 = Tab1:Section({Title = "ứng dụng thôi miên cô em gái nhỏ", Icon = ""})
+
+Tab1:Button({
+    Title = "Chapter 1(Hết)",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        local MangaMaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/phanchitinhps2020-beep/Script/refs/heads/main/MangaMaker"))()
+local win = MangaMaker:CreateWindow("Chapter 1")
+
+-- Thêm ảnh nhanh
+for i=1,24 do
+    local url = "https://raw.githubusercontent.com/phanchitinhps2020-beep/Ung-dung-thoi-mien-co-em-gai-nho/refs/heads/main/"..i..".jpg"
+    win:AddImage(url)
+end
+    end
+})
