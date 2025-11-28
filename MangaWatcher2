@@ -55,3 +55,21 @@ for i=1,24 do
 end
     end
 })
+
+local ElementsSection3 = Tab1:Section({Title = "Chạm Vào Là Yêu", Icon = ""})
+
+Tab1:Button({
+    Title = "Chapter 1",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        local MangaMaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/phanchitinhps2020-beep/Script/refs/heads/main/MangaMaker"))()
+local win = MangaMaker:CreateWindow("Chapter 1")
+
+-- Thêm ảnh nhanh
+for i=1,24 do
+    local url = "https://raw.githubusercontent.com/phanchitinhps2020-beep/Cham-vao-la-yeu-chapter-1/refs/heads/main/"..i..".jpg"
+    win:AddImage(url)
+end
+    end
+})
